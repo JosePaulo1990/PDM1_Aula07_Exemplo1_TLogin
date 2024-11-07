@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.pdm1_aula07_exemplo1_tlogin"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.pdm1_aula07_exemplo1_tlogin"
