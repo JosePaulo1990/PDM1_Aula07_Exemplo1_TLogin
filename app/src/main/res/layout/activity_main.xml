@@ -12,6 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="117dp"
         android:layout_height="200dp"
+        android:src="@drawable/logo_ifpe_garanhuns_vertical"
         tools:src="@drawable/logo_ifpe_garanhuns_vertical" />
 
     <TextView
