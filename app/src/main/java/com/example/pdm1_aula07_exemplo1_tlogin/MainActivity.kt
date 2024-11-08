@@ -1,5 +1,6 @@
 package com.example.pdm1_aula07_exemplo1_tlogin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -14,9 +15,12 @@ class MainActivity : ComponentActivity() {
         binding.button.setOnClickListener {
             val email = binding.editTextTextEmailAddress.text.toString().trim()
             val password = binding.editTextTextPassword.text.toString().trim()
-            if (login(email, password))
+            if (login(email, password)) {
                 Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-            else
+                val intent = Intent(this, SecondActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else
                 Toast.makeText(this, "E-mail ou senha incorretos!", Toast.LENGTH_SHORT).show()
         }
     }
