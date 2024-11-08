@@ -21,6 +21,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:height="100dp"
         android:gravity="center"
         android:text="Seja bem-vindo!"
         android:textColor="@color/white"
