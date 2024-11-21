@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.pdm1_aula07_exemplo1_tlogin.databinding.ActivityMainBinding
+import java.util.Date
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,8 @@ class MainActivity : ComponentActivity() {
             if (login(email, password)) {
                 Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("email", email)
+                intent.putExtra("dataLogin", Date().toString())
                 startActivity(intent)
                 finish()
             } else

@@ -10,5 +10,10 @@ class SecondActivity : Activity() { // Destacar o uso de Activity()
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val usuario = "Usuário: ${intent.getStringExtra("email")}"
+        val dataLogin = "Logado em: ${intent.getStringExtra("dataLogin")}"
+        binding.textViewUsuario.text = usuario
+        binding.textViewData.text = dataLogin
     }
 }
